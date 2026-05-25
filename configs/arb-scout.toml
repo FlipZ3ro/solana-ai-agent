@@ -1,0 +1,15 @@
+[mimo]
+api_key = "set-via-env-MIMO_API_KEY"
+base_url = "https://token-plan-sgp.xiaomimimo.com/v1"
+fast_model = "mimo-v2.5"
+deep_model = "mimo-v2.5-pro"
+
+[solana]
+rpc_url = "https://api.mainnet-beta.solana.com"
+ws_url = "wss://api.mainnet-beta.solana.com"
+keypair_path = "~/.config/solana/id.json"
+
+[agent]
+strategy = "arb-scout"
+dry_run = true
+poll_interval_ms = 2000

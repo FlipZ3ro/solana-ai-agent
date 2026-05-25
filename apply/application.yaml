@@ -1,0 +1,47 @@
+# Xiaomi MiMo 100T application data — solana-ai-agent project.
+# All submitted content is in ENGLISH.
+
+email: TBD
+
+tools:
+  - Claude Code
+  - Cursor
+  - Cline
+
+models:
+  - Claude 系列
+  - GPT 系列
+  - MiMo 系列
+
+project_description: |
+  solana-ai-agent is an open-source Rust framework for AI-driven on-chain
+  agents on Solana, powered by Xiaomi MiMo. Repository:
+  github.com/FlipZ3ro/solana-ai-agent.
+
+  Pain point: Solana automation is dominated by Python and TypeScript bots
+  that cannot keep up with the chain's latency requirements. Rust is the
+  native runtime for production Solana bots, but the existing Rust crates
+  do not include any LLM-decision layer. solana-ai-agent fills the gap.
+
+  Core logic flow:
+  (1) Async stream of on-chain state via solana-client RPC plus WebSocket
+  subscriptions.
+  (2) Strategy trait filters which updates deserve a MiMo consult.
+  (3) MiMo client (reqwest plus serde) calls mimo-v2.5-pro for deep
+  reasoning or mimo-v2.5 for fast tactical decisions. Strict JSON output.
+  (4) Decision parsed into an action plus confidence. If non-dry-run, the
+  AgentSigner builds, signs, and submits a transaction via RPC.
+
+  Three reference strategies ship out of the box: arb-scout for DEX price
+  divergence, liquidation-watch for under-collateralized loans, dao-vote
+  for governance proposals.
+
+  Token plan: 10M tokens per day for one bot at 1 decision per minute, up
+  to 150M per day for continuous-log mode. Goal: 3 production strategies
+  open-sourced plus a public trajectory dataset on HuggingFace. Total
+  target ~1.5B tokens over 8 weeks. Solo maintainer. Tools: Claude Code,
+  Cursor, Cline.
+
+github_or_demo_url: https://github.com/FlipZ3ro/solana-ai-agent
+
+upload_files: []
